@@ -8,7 +8,12 @@
 
     <style>
 
-
+        .navbar{
+            position: fixed;
+            z-index: 5;
+            width: 100%;
+            top: 0;
+        }
         body{
             background-color: black;
             color: rgb(13, 173, 173);
@@ -20,6 +25,12 @@
             border: 2px solid white;
             font-size: 16px;
         }
+
+        .card img:hover{
+            border: 5px solid rgb(80, 236, 66);
+        }
+
+
         .card-title{
             color: rgb(13, 173, 173);
             font-size: 18px;
@@ -53,11 +64,15 @@
             scroll-behavior: smooth;
         }
 
-        .gallery img{
-            width: 200px;
-            border: 2px solid white;
+        #gallery img{
+            /* width: 20px; */
+            border: 2px solid transparent;
         }
 
+
+        #gallery img:hover{
+            border: 2px solid rgb(79, 248, 63);
+        }
 
         footer{
             padding: 15px;
@@ -65,17 +80,82 @@
             background-color: teal;
             color: black;
             font-size: 20px;
+            background-image: url(/img/bck4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
-        footer img{
-            width: 50px;
-        }
+        
+
         ul li{
             list-style: none;
         }
+
+        .box{
+            height: 300px;
+            margin: 10px;
+            color: white;
+            font-weight: 600;
+        }
+        .box-container{
+            width: 60%;
+            margin: 50px auto;
+        }
+
+        .box img{
+            width: 100%;
+            height: 300px;
+        }
+
+
+        .bck1{
+            background-image: url(/img/bck1.jpg);
+            background-size: 90%;
+            background-position: center bottom;
+            transition: 1s;
+        }
+
+        .bck1:hover{
+            background-image: url(/img/bck11.jpg);
+            background-size: 90%;
+            background-position: center bottom;
+            transition: 1s;
+        }
+
+
+
+        .bck2{
+            background-image: url(/img/bck2.jpg);
+            background-size: 90%;
+            background-position: center bottom;
+            transition: 1s;
+        }
+
+        .bck2:hover{
+            background-image: url(/img/bck22.jpg);
+            background-size: 90%;
+            background-position: center bottom;
+            transition: 1s;
+        }
+
+        .bck3{
+            background-image: url(/img/bck3.jpg);
+            background-size: 90%;
+            background-position: center bottom;
+            transition: 1s;
+        }
+
+        .bck3:hover{
+            background-image: url(/img/bck33.jpg);
+            background-size: 90%;
+            background-position: center bottom;
+            transition: 1s;
+        }
+
     </style>
   </head>
   <body>
-<div class="container">
+
     
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Welcome</a>
@@ -99,10 +179,10 @@
           </ul>
         </div>
       </nav>
-</div>
+
    
 <div class="container" id="best">
-    <h1 class="text-center my-5">Top Albums</h1>
+    <h1 class="text-center my-5" style="padding-top: 35px;">Top Albums</h1>
 <div class="row">
     <div class="card col-sm-6 col-md-4 col-lg-3">
         <img src="/img/bye.jpeg">
@@ -215,55 +295,69 @@
 
 <div class="container" id="gallery">
     <h1 class="text-center my-5">Gallery</h1>
-    <div class="row">
-        <div class="gallery">    
-            <img src="/img/1.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/2.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/3.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/4.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/5.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/6.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/7.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/8.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/9.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/11.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/12.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/13.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/14.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/15.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/16.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/17.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/18.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/19.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/20.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-            <img src="/img/10.jpg" class="col-sm-6 col-md-4 col-lg-4 my-3">
-        </div>
+    <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4">   
+        <img src="https://source.unsplash.com/random" class="col">
+        <img src="https://source.unsplash.com/random"  class="col" >
+        <img src="https://source.unsplash.com/random"   class="col">
+        <img src="https://source.unsplash.com/random"  class="col" >
+        <img src="https://source.unsplash.com/random"   class="col">
+        <img src="https://source.unsplash.com/random"  class="col">
+        <img src="https://source.unsplash.com/random"  class="col" >
+        <img src="https://source.unsplash.com/random"  class="col" >
+        <img src="https://source.unsplash.com/random"  class="col">
+        <img src="https://source.unsplash.com/random"  class="col">
+        <img src="https://source.unsplash.com/random"  class="col">
+        <img src="https://source.unsplash.com/random"  class="col" >
+        <img src="https://source.unsplash.com/random"  class="col">
+        <img src="https://source.unsplash.com/random"  class="col">
+        <img src="https://source.unsplash.com/random"  class="col">
+        <img src="https://source.unsplash.com/random" class="col" >
+        <img src="https://source.unsplash.com/random" class="col" >
+        <img src="https://source.unsplash.com/random" class="col" >
+        <img src="https://source.unsplash.com/random" class="col" >
+        <img src="https://source.unsplash.com/random"  class="col">
     </div>
 </div>
+
+
+
+
+
+<h1 class="text-center my-5">Other section</h1>
+<div class="box-container row justify-content-center align-items-center">
+    <div class="box bck1 col-sm-10 col-md-8 col-lg-7"></div>
+    <div class="box col-sm-10 col-md-3 col-lg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis non eveniet pariatur voluptas nisi eaque voluptatum quidem delectus nemo vero obcaecati, architecto consectetur natus ab facere sunt dicta, eligendi doloribus.</div>
+    <div class="box col-sm-10 col-md-3 col-lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae itaque animi id, esse quibusdam vel! Itaque reprehenderit quisquam quaerat quis vel aut blanditiis, sit nesciunt assumenda quod excepturi non.</div>
+    <div class="box bck2 col-sm-10 col-md-8 col-lg-7"></div>
+    <div class="box bck3 col-sm-10 col-md-8 col-lg-7"></div>
+    <div class="box col-sm-10 col-md-3box col-lg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sit sed nobis libero cumque, rerum a quam, amet, consectetur quisquam ipsum distinctio minima. Aspernatur excepturi doloribus sunt blanditiis natus iusto.</div>
+</div>
+
+
+
+
+
+
+
+
 
 
 <footer>
-<div class="container">
-    <h1 class="text-center">Hello I am footer</h1>
+
+    <h1 class="text-center" style="padding-top: 25px;">Hello I am footer</h1>
     <div class="row">
-    <ul class="col-6">
-        <li><img src="/img/icons8-instagram-100.png">Instagram</li>
-        <li> <img src="/img/icons8-facebook-100.png">Facebook</li>
-        <li> <img src="/img/icons8-twitter-100.png">Twitter</li>
-    </ul>
-    <p class="col-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Vel sed enim eum corrupti quas voluptatibus quaerat officiis vitae eveniet deserunt odit,
-    libero eligendi! Veniam, rerum. Laboriosam accusamus modi velit quasi!</p>
+        <div class="col-sm-10 col-md-6 col-lg-6"><ul>
+            <li><img src="/img/icons8-instagram-100.png">Instagram</li>
+            <li> <img src="/img/icons8-facebook-100.png">Facebook</li>
+            <li> <img src="/img/icons8-twitter-100.png">Twitter</li>
+        </ul>
+    </div>
+        <div class="col-sm-10 col-md-6 col-lg-4"></div>
+    
+    
     </div>
 </div>
 </footer>
-
-
-
-
-
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
